@@ -46,14 +46,14 @@ html{
 .maleft .keyword {width:100%;background:#fff;border-radius: 5px;padding:10px;box-sizing: border-box;}
 
 .mamiddle{float:left;width:880px;margin-left:10px;border-radius: 5px;}
-.mamiddle .conmatop{width:100%;height:300px;margin-bottom:10px;}
+.mamiddle .conmatop{width:100%;height:500px;margin-bottom:10px;}
  
 .mamiddle .conmatop .swiper-container{
-    width: 880px;height: 300px;
+    width: 880px;height: 500px;
     --swiper-theme-color: #ff6600;/* 设置Swiper风格 */
     --swiper-navigation-color: gold;/* 单独设置按钮颜色 */
     --swiper-navigation-size: 20px;/* 设置按钮大小 */}
-.mamiddle .conmatop .swiper-container img{width:880px;height:300px;}
+.mamiddle .conmatop .swiper-container img{width:880px;height:500px;}
 
 .mamiddle .conmabottom {width:100%;position: relative;}
 .mamiddle .conmabottom .con{width:100%;border-radius: 5px 5px 0 0;position: absolute;left:0;top:0;background:#fff;}
