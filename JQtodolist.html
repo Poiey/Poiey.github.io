@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>todolist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+
+        #wrap {
+            width: 800px;
+            /* padding-bottom: 300px; */
+            margin: 0 auto;
+            background: #eee;
+            padding: 20px;
+            box-sizing: border-box;
+            ;
+        }
+
+        #wrap .top {
+            width: 760px;
+            margin: 0 auto;
+            background: #eee;
+        }
+
+        #wrap .top h1 {
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #wrap .top .search {
+            width: 755px;
+            height: 30px;
+            overflow: hidden;
+        }
+
+        #wrap .top .search .txt {
+            width: 700px;
+            height: 28px;
+            float: left;
+        }
+
+        #wrap .top .search .btn {
+            width: 50px;
+            height: 30px;
+            float: left;
+        }
+
+        #wrap .top .con {
+            width: 760px;
+        }
+
+        #wrap .top .con .main {
+            width: 760px;
+            height: 30px;
+            overflow: hidden;
+            background: #ccc;
+            line-height: 30px;
+            margin-top: 10px;
+        }
+
+        #wrap .top .con .main .check {
+            float: left;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        #wrap .top .con .main .first {
+            float: left;
+            margin-left: 10px;
+        }
+
+        #wrap .top .con .main .second {
+            float: left;
+            margin-left: 10px;
+            margin-top: 6px;
+        }
+
+        #wrap .top .con .main .right {
+            float: right;
+            overflow: hidden;
+            width: 80px;
+            margin-right: 20px;
+        }
+
+        #wrap .top .con .main .right .bianji {
+            float: left;
+            cursor: pointer;
+        }
+
+        #wrap .top .con .main .right .bianji:hover {
+            color: red;
+        }
+
+        #wrap .top .con .main .right .shanchu {
+            float: right;
+            cursor: pointer;
+        }
+
+        #wrap .top .con .main .right .shanchu:hover {
+            color: red;
+        }
+
+        #wrap .top .add {
+            width: 500px;
+            height: 30px;
+            overflow: hidden;
+            margin-top: 10px;
+            line-height: 30px;
+        }
+
+        #wrap .top .add .checks {
+            float: left;
+            margin-left: 10px;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        #wrap .top .add span {
+            float: left;
+            margin-left: 5px;
+        }
+
+        #wrap .top .add .chuli {
+            float: left;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        #wrap .top .add .dele {
+            float: left;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        #wrap .bom h1 {
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #wrap .bom .con .main {
+            width: 760px;
+            height: 30px;
+            overflow: hidden;
+            background: #ddd;
+            line-height: 30px;
+            margin-top: 10px;
+        }
+
+        #wrap .bom .con .main span {
+            float: left;
+            margin-left: 20px;
+        }
+
+        #wrap .bom .con .main .check {
+            float: left;
+            margin-left: 20px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        #wrap .bom .con .main .right .bianji {
+            float: left;
+            cursor: pointer;
+        }
+
+        #wrap .bom .con .main .right .shanchu {
+            float: right;
+            cursor: pointer;
+        }
+
+        #wrap .bom .con .main .right {
+            float: right;
+            overflow: hidden;
+            width: 80px;
+            margin-right: 20px;
+            display: none
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="top">
+            <h1>代办任务事项</h1>
+            <div class="search">
+                <input type="text" class="txt">
+                <input type="button" value="添加" class="btn">
+            </div>
+            <div class="con">
+                <div class="main">
+                    <input type="checkbox" class="check">
+                    <div class="first">任务一</div>
+                    <!-- <input type="text" class="second"> -->
+                    <div class="right">
+                        <div class="bianji">编辑</div>
+                        <div class="shanchu">删除</div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="add">
+                <input type="checkbox" class="checks">
+                <span>选择全部</span>
+                <div class="chuli">已处理</div>
+                <div class="dele">删除</div>
+            </div>
+        </div>
+        <div class="bom">
+            <h1>已处理任务事项</h1>
+            <div class="bommain">
+                <div class="con">
+                    <!-- <div class="main">
+                        <input type="checkbox" class="check">
+                        <span>任务一</span>
+                        <div class="right">
+                            <div class="bianji">编辑</div>
+                            <div class="shanchu">删除</div>
+                        </div>
+                    </div> -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='jQuery/jquery-1.8.3/jquery-1.8.3.js'></script>
+    <script src="js/todolist.js"></script>
+  
+</body>
+
+</html>

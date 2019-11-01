@@ -1,0 +1,79 @@
+{
+  "id": "1475633",
+  "name": "个人博客",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "593516",
+      "name": "右箭头",
+      "font_class": "weibiaoti40",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "781638",
+      "name": "右箭头",
+      "font_class": "sanjiaoright",
+      "unicode": "e6b7",
+      "unicode_decimal": 59063
+    },
+    {
+      "icon_id": "2155433",
+      "name": "定位",
+      "font_class": "dingwei",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "3835606",
+      "name": "爱好",
+      "font_class": "aihao",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "4333456",
+      "name": "写字",
+      "font_class": "xiezi",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "6940830",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "6940831",
+      "name": "左箭头-",
+      "font_class": "zuojiantou-",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "6966953",
+      "name": "右箭头实心小",
+      "font_class": "youjiantoushixinxiao",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "6966962",
+      "name": "左箭头实心小",
+      "font_class": "zuojiantoushixinxiao",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "8157647",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    }
+  ]
+}

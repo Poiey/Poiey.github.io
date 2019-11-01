@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fireworks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .fire {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+
+        }
+
+        /* .box .one {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position:absolute;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="one"></div>
+    </div>
+</body>
+<script>
+    var oBox = document.querySelector('.box')
+    setInterval(function () {
+
+        var startx = randomNum(50, this.oBox.clientWidth - 50)
+        var starty = randomNum(10, this.oBox.clientHeight - 100)
+        new Fireworks(oBox, startx, starty)
+
+    }, 2000)
+    oBox.onclick = function (e) {
+        var ev = event || e
+        var startx = ev.clientX;
+        var starty = ev.clientY;
+        new Fireworks(oBox, startx, starty)
+    }
+
+    function Fireworks(oBox, startx, starty) {
+        this.oBox = oBox;
+        this.startx = startx;
+        this.starty = starty;
+        this.init()
+    }
+
+    Fireworks.prototype.init = function () {
+        // 创建初始状态
+        this.fire = document.createElement('div')
+        this.fire.className = 'fire'
+        this.fire.style.backgroundColor = randomColor()
+        this.fire.style.left = this.startx + 'px'
+        this.fire.style.bottom = '0px'
+        this.oBox.appendChild(this.fire)
+        this.send()
+    }
+
+
+    Fireworks.prototype.send = function () {
+        move(this.startx, this.starty, this.fire, function () {
+            this.oBox.removeChild(this.fire)
+            this.boom()
+        }.bind(this))
+    }
+
+
+    Fireworks.prototype.boom = function () {
+        var self = this
+        for (var i = 0, len = randomNum(80, 100); i < len; i++) {
+            var fire = document.createElement('div')
+            fire.className = 'fire'
+            fire.style.backgroundColor = randomColor()
+            fire.style.left = this.startx + 'px'
+            fire.style.top = this.starty + 'px'
+            this.oBox.appendChild(fire)
+
+            var startx = randomNum(50, this.oBox.clientWidth - 50)
+            var starty = randomNum(10, this.oBox.clientHeight - 100)
+
+            move(startx, starty, fire, function () {
+                self.oBox.removeChild(this)
+            }.bind(fire))
+        }
+    }
+
+
+
+
+
+
+
+    function randomNum(min, max) {
+        return Math.round(Math.random() * (max - min)) + min
+    }
+
+    function randomColor() {
+        var col = '#'
+        var str = '0123456789abcdefg'
+        for (var i = 0; i < 6; i++) {
+            var num = Math.round(Math.random() * 16)
+            col += str[num]
+        }
+        return col
+    }
+
+
+    function move(targetX, targetY, dom, callback) {
+        var timer = null
+        clearInterval(timer)
+        timer = setInterval(function () {
+            var speedX = (targetX - dom.offsetLeft) / 10
+            speedX = speedX > 0 ? Math.ceil(speedX) : Math.floor(speedX)
+            if (Math.abs(targetX - dom.offsetLeft) <= Math.abs(speedX)) {
+                dom.style.left = targetX + 'px'
+            } else {
+                dom.style.left = dom.offsetLeft + speedX + 'px'
+            }
+            var speedY = (targetY - dom.offsetTop) / 10
+            speedY = speedY > 0 ? Math.ceil(speedY) : Math.floor(speedY)
+            if (Math.abs(targetY - dom.offsetTop) <= Math.abs(speedY)) {
+                dom.style.top = targetY + 'px'
+                clearInterval(timer)
+                callback()
+            } else {
+                dom.style.top = dom.offsetTop + speedY + 'px'
+            }
+        }, 20)
+    }
+
+
+</script>
+
+</html>
