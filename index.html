@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="iconfont/iconfont.css">
     <link rel="icon" href="images/下载.png" type="image/x-icon">
     <link rel="stylesheet" href="css/swiper.min.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+
 </head>
 
 <body>
@@ -19,10 +21,10 @@
             <div class="logo"><a href="https://poiey.github.io">Poiey.github.io</a></div>
             <div class="navlist">
                 <ul class="ullist clearfix">
-                    <li class="home">首页</li>
-                    <!-- <li class="navtop">示例</li> -->
-                    <!-- <li class="navtop">学习感想</li> -->
-                    <!-- <li>首页</li> -->
+                    <li class="home"><span>首页</span></li>
+                    <li class="navtop"><span>示例</span></li>
+                    <li class="navtop"><span>学习感想</span></li>
+
                 </ul>
             </div>
         </div>
@@ -33,7 +35,15 @@
                 <div class="massage">
                     <img src="images/aas.png" alt="">
                     <p>Poiey</p>
-                    <div class="address"><i class="iconfont icon-dingwei"></i> 广东省惠州</div>
+                    <div class="address"><i class="iconfont icon-dingwei"></i> 广东省惠州
+                        <div class="map">
+                            <!--百度地图容器-->
+                            <div style="width:300px;height:300px;border:#ccc solid 1px;" id="dituContent"></div>
+                        </div>
+
+
+                    </div>
+
                     <div class="hobby"><i class="iconfont icon-aihao"></i> 电影，旅游，游戏</div>
                 </div>
                 <div class="navside">
@@ -45,6 +55,8 @@
                         <li><i class="iconfont icon-youjiantoushixinxiao"></i>Swiper (1)</li>
                         <li><i class="iconfont icon-youjiantoushixinxiao"></i>jQuery</li>
                         <li><i class="iconfont icon-youjiantoushixinxiao"></i>JS编程思维【1】 (1)</li>
+                        <li><i class="iconfont icon-youjiantoushixinxiao"></i>Ajax (1)</li>
+
                         <li><i class="iconfont icon-youjiantoushixinxiao"></i>模块化 (1)</li>
                         <li><i class="iconfont icon-youjiantoushixinxiao"></i>Gulp (1)</li>
                         <li><i class="iconfont icon-youjiantoushixinxiao"></i>Sass (1)</li>
@@ -273,6 +285,9 @@
                                 <img src="images/ps2.png" alt="单例模式：">
                             </div>
                         </div>
+                    </div>
+                    <div class="con active">
+                        <div class="conhead"># Ajax #</div>
                     </div>
                     <div class="con active">
                         <div class="conhead"># 模块化 #</div>
