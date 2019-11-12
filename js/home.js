@@ -80,7 +80,7 @@
                 }
             })()
         }
-    }
+    }  
     //创建InfoWindow
     function createInfoWindow(i) {
         var json = markerArr[i];
