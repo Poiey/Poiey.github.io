@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <!-- 导航条 -->
     <div id="nav">
         <div class="nav_inner clearfix">
             <div class="logo"><a href="https://poiey.github.io">Poiey.github.io</a></div>
@@ -27,15 +28,20 @@
             </div>
         </div>
     </div>
+
+    <!-- 主体内容 -->
     <div id="main">
         <div class="main_inner clearfix">
+            <!-- 左侧栏 -->
             <div class="maleft">
+                <!-- 头像信息 -->
                 <div class="massage">
-                    <img src="images/aas.png" alt="">
+                    <img src="images/psb.jpg" alt="">
                     <p>Poiey</p>
                     <div class="address"><i class="iconfont icon-dingwei"></i> 广东省惠州</div>
                     <div class="hobby"><i class="iconfont icon-aihao"></i> 电影，旅游，游戏</div>
                 </div>
+                <!-- 左侧导航栏 -->
                 <div class="navside">
                     <ul>
                         <li><i class="iconfont icon-youjiantoushixinxiao"></i>HTML (1)</li>
@@ -52,11 +58,13 @@
                         <li><i class="iconfont icon-youjiantoushixinxiao"></i>Git (1)</li>
                     </ul>
                 </div>
+                <!-- 简介 -->
                 <div class="jianjie">
                     <p>此博客旨在记录学习中的过程！</p>
                     <p>简介：一名前端小学生</p>
                     <p>邮箱：692300083@qq.com</p>
                 </div>
+                <!-- 动漫 -->
                 <div class="interest">
                     <p>兴趣:动漫</p>
                     <div class="incontent">
@@ -66,6 +74,7 @@
                         <div class="aihao"><img src="images/pic4.png" alt="哪吒"></div>
                     </div>
                 </div>
+                <!-- 关键字 -->
                 <div class="keyword">
                     <p>一些关键字与保留字：</p>
                     break do try typeof
@@ -82,7 +91,9 @@
                     double import public
                 </div>
             </div>
+            <!-- 右侧栏 -->
             <div class="mamiddle">
+                <!-- 轮播图 -->
                 <div class="conmatop">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -101,7 +112,7 @@
                         <div class="swiper-button-next"></div>
                     </div>
                 </div>
-
+                <!-- 正文 -->
                 <div class="conmabottom">
                     <div class="con active">
                         <div class="conhead"># HTML #</div>
@@ -277,6 +288,49 @@
                     </div>
                     <div class="con active">
                         <div class="conhead"># Ajax #</div>
+                            <div class="example" style="overflow: hidden;">
+                            <div class="exhead"><i class="iconfont icon-xiezi"></i><span>创建ajax</span><em
+                                    class="dispaly">⚪</em></div>
+                            <div class="excontent" style="background:#eee;">
+                                <pre
+                                    style="color:#666;font-size:16px;position:relative;left:-370px;top:0;font-weight: bold;">
+                                         JSON数据是一个轻量级，小巧的文本形式。
+    
+                                         XMLHttpRequest对象可以与服务器进行数据交互；
+                                        
+                                         创建一个ajax
+                                
+                                            1. 创建一个ajax对象
+                                            var xhr = new XMLHttprequest();
+                                            
+                                            2.连接服务器
+                                            xhr.open('get','test,php',true)
+                                    
+                                            3.发送请求
+                                            xhr.send()
+                                            post请求时要在括号内传递参数
+                                            post请求时在send前加xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                                            这是模拟表单post请求来传递参数
+                                    
+                                            4.监听服务器响应情况
+                                                监听 readyState属性值的变化；如果返回的值不是4，说明服务器还未请求完成
+                                                当readyState 改变时就会出发 onreadystatechange 事件
+                                                如果status的值为200时，表示请求成功；
+                                    
+                                                xhr.onreadystatechange=function (){
+                                                     if (xhr.readyState==4) { // 请求完成
+                                                         if (xhr.status==200) { //ok 成功
+                                                             alert( xhr.responseText ); // 得到响应结果
+                                                         } else{
+                                                             alert( xhr.status ); // 弹出失败的状态码
+                                                         };
+                                                     };
+                                                }
+                                    
+                                                // xhr.responseTest 获得文本形式的响应数据
+                                    </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="con active">
                         <div class="conhead"># 模块化 #</div>
@@ -291,20 +345,16 @@
                         <div class="conhead"># Git #</div>
                     </div>
 
-
-
+                    <!-- demo -->
                     <div class="demo">
                         <div class="demoinner">
                             <div class="demo1"><a href="JQtodolist.html">Demo:todolist</a></div>
                             <div class="demo1"><a href="fireworks.html">Demo:fireworks</a></div>
-                            <!-- <div class="demo1"><a href="#"></a></div> -->
+                            <div class="demo1"><a href="progress.html">Demo:progress</a></div>
+                            <div class="demo1"><a href="pagechange.html">Demo:翻书(css)</a></div>
                         </div>
                     </div>
-
-
-
                 </div>
-
             </div>
         </div>
     </div>
@@ -331,7 +381,7 @@
 
 
 
-    <script src="jQuery/jquery-1.8.3/jquery-1.8.3.js"></script>
+    <script src="jQuery/jquery-1.8.3/jquery-1.8.3.min.js"></script>
     <script src="js/home.js"></script>
     <script src='js/swiper.min.js'></script>
 </body>

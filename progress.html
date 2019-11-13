@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3圆形进度条动画特效</title>
+    <style>
+        html {
+            width: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .demo {
+            width: 400px;
+            height: 400px;
+        }
+
+        .demo .main {
+            width: 400px;
+            height: 400px;
+            background: green;
+            position: relative;
+            border-radius: 50%;
+            box-shadow: 0 0 30px green;
+        }
+
+        .main .left {
+            width: 200px;
+            height: 400px;
+            background: orange;
+            position:
+                absolute;
+            left: 0;
+            top: 0;
+            border-radius: 200px 0 0 200px;
+            z-index: 1;
+            transform-origin: right center;
+        }
+
+        .main .right {
+            width: 200px;
+            height: 400px;
+            background: orange;
+            position:
+                absolute;
+            left: 200px;
+            top: 0;
+            border-radius: 0 200px 200px 0;
+            z-index: 1;
+            transform-origin: left center;
+        }
+
+        .main .content {
+            width: 330px;
+            height: 330px;
+            background: #fff;
+            position:
+                absolute;
+            left: 35px;
+            top: 35px;
+            border-radius: 50%;
+            z-index: 5;
+            font-size: 50px;
+            text-align: center;
+            line-height: 330px;
+        }
+
+        .main .mask {
+            width: 200px;
+            height: 400px;
+            background: green;
+            position:
+                absolute;
+            left: 200px;
+            top: 0;
+            border-radius: 0 200px 200px 0;
+            z-index: 3;
+            opacity: 0;
+        }
+
+        .active {
+            transform: rotate(80deg);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="demo">
+        <div class="main">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="mask"></div>
+            <div class="content">
+                <span>01</span>:
+                <span>59</span>:
+                <span>59</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./jQuery/jquery-1.8.3/jquery-1.8.3.min.js"></script>
+    <script>
+        $(function () {
+            var count = 3600;
+            var timer = setInterval(function () {
+                count--
+                var house = count / 60 / 60 % 60
+                var hous = strNum(parseInt(house))
+                var minutes = count / 60 % 60
+                var minu = strNum(parseInt(minutes))
+                var second = strNum(count % 60)
+                $('.content span:eq(0)').html(hous)
+                $('.content span:eq(1)').html(minu)
+                $('.content span:eq(2)').html(second)
+
+                if (count <= 0) {
+                    clearInterval(timer)
+                    return
+                }
+                var con = 360 / (3600 / count)
+                $('.right').addClass('active');
+                if (count <= 1800) {
+                    $('.mask').css('opacity', '1')
+                    $('.left').css('display', 'none')
+                    $('.right').css('transform', 'rotate(' + -con + 'deg)')
+                } else if (count > 1800) {
+                    $('.right').css('transform', 'rotate(' + -con + 'deg)')
+                }
+            }, 1000)
+
+            function strNum(num) {
+                if (num <= 9) {
+                    return '0' + num
+                } else {
+                    return num
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
