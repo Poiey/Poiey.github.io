@@ -26,7 +26,7 @@ $(function () {
             })
         })
     })
-
+    
     // 切换首页
     $('.home').bind('click', function () {
         $('.mamiddle .con').addClass('active')
