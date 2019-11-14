@@ -77,9 +77,9 @@ $(function () {
     // 随机颜色
     function randomColor() {
         var col = "#";
-        var str = '0123456789abcdefg'
+        var str = '123456789abcdef'
         for (var i = 0; i < 6; i++) {
-            var num = Math.round(Math.random() * 16)
+            var num = Math.round(Math.random() * 15)
             col += str[num]
         }
         return col

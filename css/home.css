@@ -88,6 +88,7 @@ html{
 
 .drags{width:70px;height:300px;position: fixed;right:0;top:0;}
 .drags .drag{width:60px;height:60px;float: left;margin-bottom:10px;text-align: center;line-height: 60px;cursor: pointer;border-radius: 50%;;}
+.drags .drag:hover {background:#000;color:#fff;}
 
 .tests{width:70px;height:300px;position: fixed;left:0;top:0;}
 .tests .test{width:60px;height:60px;float: left;margin-bottom:10px;text-align: center;line-height: 60px;cursor: pointer;display:none;color:#ff6600;font-weight: bold;}
