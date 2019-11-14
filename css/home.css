@@ -17,23 +17,33 @@ html{
 .nav_inner .logo a{display:block;width:200px;height:50px;line-height:50px;margin-left:30px;font-size:22px;color:#d36cd7;}
 .nav_inner .logo{float: left;}
 .nav_inner .navlist{float: left; width:800px;height:50px;margin-left:100px;}
-.nav_inner .ullist{width:100%; height:50px;}
+.nav_inner .ullist{width:100%; height:50px;font-weight: bold;}
 .nav_inner .ullist li{float: left;width:100px;height:50px;line-height:50px;text-align: center;cursor: pointer;transform: skew(-30deg);background:#eee;margin-right:10px;}
 .nav_inner .ullist li span{transform:skew(30deg);color:#000;display: block;}
 .nav_inner .ullist li:hover{background:red;color:#fff;}
 .nav_inner .ullist li:hover span{color:#fff;}
 #main{width:100%;}
 .main_inner{width:1190px;margin:0 auto;}
-.main_inner .maleft{float:left;width:300px;background:#fff;border-radius: 5px;}
-.maleft .massage{width:100%;border-bottom:10px solid #eee;padding:20px 0 40px 0;box-sizing: border-box;background:-webkit-linear-gradient(top,#66ddcb,#278b7c);}
-.maleft .massage img{width:100px;height:100px;border-radius: 50%;display:block;margin:60px auto;cursor: pointer;transition: 1s linear;} 
-.maleft .massage img:hover {transform: scale(1.1);box-shadow:0 0 10px gold;}
-.maleft .massage p{text-align: center;font-size:22px;}
+.main_inner .maleft{float:left;width:300px;background:#fff;border-radius: 5px;overflow: hidden;}
+.maleft .massage{width:100%;border-bottom:10px solid #eee;padding:60px 0 40px 0;box-sizing: border-box;background:-webkit-linear-gradient(top,#66ddcb,#278b7c);}
+.maleft .massage .userimg {width:100px;height:100px;border-radius: 50%;margin:0 auto;cursor: pointer;transition: 1s linear;overflow: hidden;display:block} 
+.maleft .massage img{width:100px;height:100px;border-radius: 50%;display:block;} 
+.maleft .massage .userimg:hover {transform: scale(1.1);box-shadow:0 0 10px #000;}
+.maleft .massage p{text-align: center;font-size:26px;display:block;margin-top:20px;font-family: monospace;font-weight: bold;cursor: pointer;}
+.maleft .massage p:hover{animation: move 1s linear infinite;}
+@keyframes move{
+    20%{transform: scale(1.1);}
+    40%{transform: rotate(-2deg);}
+    50%{transform: rotate(2deg);}
+    60%{transform: rotate(-2deg);}
+    70%{transform: rotate(2deg);}
+    100%{transform: rotate(1);}
+}
 .maleft .massage .address{width:100%;height:50px;text-align: center;margin-top:20px;display:block;cursor: pointer;line-height:50px;}
 .maleft .massage .address:hover .icon-dingwei{color:gold;}
 .maleft .massage .address .icon-dingwei{font-size:22px;color:#fff;}
 .maleft .massage .hobby{width:100%;text-align: center;margin-top:20px;cursor: pointer;}
-.maleft .massage .hobby .icon-aihao{font-size:22px;color:pink;}
+.maleft .massage .hobby .icon-aihao{font-size:22px;color:#fff;}
 .maleft .massage .hobby:hover .icon-aihao{color:gold;}
 .maleft .navside{width:100%;border-bottom:10px solid #eee;}
 .maleft .navside ul{width:100%;}
@@ -53,12 +63,12 @@ html{
 .mamiddle .conmatop .swiper-container{
     width: 880px;height: 500px;
     --swiper-theme-color: #ff6600;/* 设置Swiper风格 */
-    --swiper-navigation-color: gold;/* 单独设置按钮颜色 */
+    --swiper-navigation-color: d36cd7;/* 单独设置按钮颜色 */
     --swiper-navigation-size: 20px;/* 设置按钮大小 */}
 .mamiddle .conmatop .swiper-container img{width:880px;height:500px;}
 .mamiddle .conmabottom {width:100%;position: relative;}
-.mamiddle .conmabottom .con{width:100%;border-radius: 5px 5px 0 0;position: absolute;left:0;top:0;background:#fff;}
-.mamiddle .conmabottom .con .conhead{width:100%;height:50px;background:-webkit-linear-gradient(left,#bbb,#ccc,#bbb);font-size:22px;color:#000;font-weight: bold;line-height: 50px;text-indent: 2em;}
+.mamiddle .conmabottom .con{width:100%;border-radius: 5px 5px 0 0;position: absolute;left:0;top:0;background:#eee;min-height:800px;}
+.mamiddle .conmabottom .con .conhead{width:100%;height:50px;background:-webkit-linear-gradient(left,#bbb,#ccc,#bbb);font-size:22px;color:#d36cd7;line-height: 50px;text-indent: 2em;}
 .mamiddle .conmabottom .con .example {width:860px;border-radius: 6px;margin:10px auto;}
 .mamiddle .conmabottom .con .example .exhead {width:860px;height:30px;background:#bbb;border-radius:6px 6px 0 0 ;line-height:30px; text-indent: 2em;font-size:16px;color:#fff;position: relative;}
 .mamiddle .conmabottom .con .example .exhead .iconfont {color:gold;}
@@ -68,8 +78,8 @@ html{
 .mamiddle .conmabottom .con .example .excontent p{line-height:30px;}
 .mamiddle .conmabottom .con .example .excontent span{font-weight: bold;}
 .active{display:none;}
-.mamiddle .conmabottom .demo {width:100%;position: absolute;left:0;top:0;}
-.mamiddle .conmabottom .demo .demoinner{width:100%;border-radius: 5px 5px 0 0;background:#fff;display:flex;justify-content: space-around;flex-wrap: wrap;}
+.mamiddle .conmabottom .demo {width:100%;position: absolute;left:0;top:0;min-height:800px;}
+.mamiddle .conmabottom .demo .demoinner{width:100%;border-radius: 5px 5px 0 0;background:#fff;display:flex;justify-content: space-around;flex-wrap: wrap;min-height:800px}
 .mamiddle .conmabottom .demo .demoinner .demo1{width:200px;height:100px;border-radius: 10px;background:#bbb;margin:10px 0;transition: all .5s linear;}
 .mamiddle .conmabottom .demo .demoinner .demo1 a{display:block;width:100%;height:100%;font-size:22px;color:#d36cd7;text-align: center;line-height: 100px;}
 .mamiddle .conmabottom .demo .demoinner .demo1:hover {transform: translateY(-6px);}
@@ -77,7 +87,7 @@ html{
 .box img{width:200px;height:300px;}
 
 .drags{width:70px;height:300px;position: fixed;right:0;top:0;}
-.drags .drag{width:60px;height:60px;float: left;margin-bottom:10px;text-align: center;line-height: 60px;cursor: pointer;}
+.drags .drag{width:60px;height:60px;float: left;margin-bottom:10px;text-align: center;line-height: 60px;cursor: pointer;border-radius: 50%;;}
 
 .tests{width:70px;height:300px;position: fixed;left:0;top:0;}
 .tests .test{width:60px;height:60px;float: left;margin-bottom:10px;text-align: center;line-height: 60px;cursor: pointer;display:none;color:#ff6600;font-weight: bold;}
