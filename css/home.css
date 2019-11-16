@@ -1,7 +1,7 @@
 html{
     width:100%;
     background:#ddd;
-    background:url('../images/bg.jpg');
+    /* background:url('../images/bg.jpg'); */
 }
 
 #banner {width:100%;}
@@ -11,7 +11,10 @@ html{
     margin:0 auto;
 
 } 
-  
+#content {
+	width:0px;
+	height:0px;
+}
 #nav{width:100%;margin-bottom:10px;}
 #nav .nav_inner{width:1190px;height:50px;margin:0 auto;background:-webkit-linear-gradient(left,#ccc,#ddd,#ccc);border-radius: 5px;;}
 .nav_inner .logo a{display:block;width:200px;height:50px;line-height:50px;margin-left:30px;font-size:22px;color:#d36cd7;}
