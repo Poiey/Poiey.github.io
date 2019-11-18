@@ -453,15 +453,20 @@
                             </div>
                         </div>
                         <div class="example">
-                                <div class="exhead"><i class="iconfont icon-xiezi"></i><span>浏览器加载规则</span><em
-                                        class="dispaly">⚪</em>
-                                </div>
-                                <div class="excontent">
-                                        <p>默认情况下,浏览器遇到script标签就会停止渲染页面,如果是引用外部脚本文件，而且文件过大的情况下,页面会出现卡死,页面无任何相应。</p>
-                                        <p></p>
-                                    </div>
+                            <div class="exhead"><i class="iconfont icon-xiezi"></i><span>浏览器加载规则</span><em
+                                    class="dispaly">⚪</em>
                             </div>
-    
+                            <div class="excontent">
+                                <p>默认情况下,浏览器遇到script标签就会停止渲染页面,如果是引用外部脚本文件，而且文件过大的情况下,页面会出现卡死,页面无任何相应。</p>
+                                <p>解决这种问题，就要使用异步的方法来加载页面，异步加载js有两种方法:</p>
+                                <p><span>defer</span>和<span>async</span></p>
+                                <p>这两种语法的区别是 ：使用defer，浏览器加载完脚本不会立即执行，它会等到页面渲染引擎渲染完页面，才会去执行js脚本。</p>
+                                <p>使用async,当浏览器加载完js脚本时，页面渲染引擎还未渲染完，则会停止渲染，等待执行完脚本，再去渲染页面，如果脚本文件过大，则会导致页面出现卡死状态。影响用户体验。</p>
+                                <p>ES6模块化会默认添加defer语句，也属于异步方法。</p>
+                                 
+                            </div>
+                        </div>
+
                     </div>
                     <div class="con active">
                         <div class="conhead"># Gulp #</div>
