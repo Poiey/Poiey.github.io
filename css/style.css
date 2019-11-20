@@ -1,0 +1,120 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #22292C;
+}
+
+#wrap {
+  width:600px;height:600px;background:transparent;position: fixed;left:50%;top:10px;margin-left:-300px;color:gold;font-size:14px;line-height:20px;
+}
+
+#wrap .wrap_inner {
+  width: 600px;
+  height: 600px;
+  background: transparent;
+  position: relative;
+  border-radius: 50%;
+}
+
+#wrap .wrap_inner .timeout {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  background: transparent;
+}
+
+#wrap .wrap_inner .timeout:nth-of-type(1) {
+  transition: 1s linear;
+  box-shadow: 0 0 20px gold;
+  border-radius: 50%;
+}
+
+#wrap .wrap_inner .timeout:nth-of-type(2) {
+  width: 450px;
+  height: 450px;
+  left: 75px;
+  top: 75px;
+  transition: 1s linear;
+
+}#wrap .wrap_inner .timeout:nth-of-type(3) {
+  width: 250px;
+  height: 250px;
+  left: 175px;
+  top: 175px;
+  transition: 1s linear;
+
+}
+
+
+#wrap .wrap_inner .timeout .secbox {
+  width: 300px;
+  height: 20px;
+  position: absolute;
+  left: 300px;
+  top: 290px;
+  transform-origin: left center;
+}
+
+#wrap .wrap_inner .timeout .minbox {
+  width: 225px;
+  height: 20px;
+  position: absolute;
+  left: 225px;
+  top: 215px;
+  transform-origin: left center;
+}
+
+#wrap .wrap_inner .timeout .houbox {
+  width: 125px;
+  height: 20px;
+  position: absolute;
+  left: 125px;
+  top: 115px;
+  transform-origin: left center;
+}
+
+
+#wrap .zhizhen {
+  width: 230px;
+  height: 20px;
+  position: absolute;
+  left: 300px;
+  top: 290px;
+  z-index: 999;
+  border-bottom:1px solid #fff;
+}
+
+
+#skip{width:400px;height:200px;position: fixed;left:50%;top:650px;margin-left:-200px;}
+#skip .skip_inner {width:400px;height:200px;background:rgba(255,255,255,.4);opacity: 0;border-radius: 20px;padding-top:60px;transition: 1s linear;cursor: pointer;}
+#skip .skip_inner .login{width:300px;height:50px;font-size:30px;line-height:50px;margin:0 auto;text-align: center;border:1px solid #000;border-radius: 25px;font-weight: 0;cursor: pointer;}
+#skip .skip_inner .login a{display:block;width:300px;height:50px;color:#000;text-decoration: none;}
+#skip .skip_inner .github{width:300px;height:50px;font-size:30px;line-height:50px;color:#000;margin:30px auto;text-align: center;border:1px solid #000;border-radius: 25px;font-weight: 0;cursor: pointer;}
+#skip .skip_inner .github a{display:block;width:300px;height:50px;color:#000;text-decoration: none;}
+
+#skip .skip_inner .login:hover {background:#000;}
+#skip .skip_inner .login:hover a{color:red;}
+#skip .skip_inner .github:hover {background:#000;color:red;}
+#skip .skip_inner .github:hover a{color:red;}
+
+#skip:hover .skip_inner{opacity: 1;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
