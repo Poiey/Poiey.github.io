@@ -73,6 +73,16 @@ Otimeout[2].style.transform = nowhours;
             }
         }, 1000)
     })();
+    // 延时隐藏
+    (function(){
+        var oSkip = document.querySelector('.skip_inner')
+        var timer = setTimeout(()=>{
+            oSkip.style.opacity = '0'
+            clearTimeout(timer)
+        },3000)
+
+    })();
+
 })()
 
 function $(id) {
