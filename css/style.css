@@ -98,7 +98,7 @@ html, body {
 #skip .skip_inner .github:hover {background:#000;color:red;}
 #skip .skip_inner .github:hover a{color:red;}
 
-#skip:hover .skip_inner{opacity: 1;}
+.opacity{opacity: 0;}
 
 
 

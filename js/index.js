@@ -77,9 +77,12 @@ Otimeout[2].style.transform = nowhours;
     (function(){
         var oSkip = document.querySelector('.skip_inner')
         var timer = setTimeout(()=>{
-            oSkip.style.opacity = '0'
+            oSkip.classList.add('opacity')
             clearTimeout(timer)
-        },3000)
+        },3000);
+        oSkip.onmouseenter=function(){
+            this.classList.remove('opacity')
+        }
 
     })();
 
